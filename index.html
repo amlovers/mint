@@ -66,7 +66,7 @@
             border-radius: 8px;
             text-align: center;
         }
-        button {
+        #connectWallet, #mintButton {
             background-color: #4da6ff;
             color: #ffffff;
             border: none;
@@ -76,8 +76,11 @@
             border-radius: 4px;
             margin-top: 10px;
         }
-        button:hover {
+        #connectWallet:hover, #mintButton:hover {
             background-color: #3a8ae0;
+        }
+        #mintButton {
+            display: none;  /* Initially hidden */
         }
         input[type="number"] {
             padding: 10px;
@@ -126,8 +129,12 @@
             <h1>Mint Your AMLOver</h1>
             <img src="https://i.postimg.cc/Ss2LbT6f/amlovers.png" alt="AMLOvers Mint" style="max-width: 300px; margin: 20px auto;">
             <p>Current Price: 0.03 ETH per AMLOver</p>
-            <input type="number" id="mintAmount" min="1" max="10" value="1">
-            <button onclick="mintAMLOver()">Mint AMLOver</button>
+            <button id="connectWallet" onclick="connectWallet()">Connect Wallet</button>
+            <div id="mintInterface" style="display: none;">
+                <input type="number" id="mintAmount" min="1" max="10" value="1">
+                <button id="mintButton" onclick="mintAMLOver()">Mint AMLOver</button>
+            </div>
+            <p id="walletStatus"></p>
             <p id="mintStatus"></p>
         </div>
         
@@ -195,11 +202,24 @@
     </div>
 
     <script>
+        let walletConnected = false;
+
+        function connectWallet() {
+        
+            walletConnected = true;
+            document.getElementById('connectWallet').style.display = 'none';
+            document.getElementById('mintInterface').style.display = 'block';
+            document.getElementById('walletStatus').innerText = 'Wallet connected!';
+        }
+
         function mintAMLOver() {
+            if (!walletConnected) {
+                alert('Please connect your wallet first.');
+                return;
+            }
             var amount = document.getElementById('mintAmount').value;
             document.getElementById('mintStatus').innerText = 'Minting ' + amount + ' AMLOver(s)... Please confirm the transaction in your wallet.';
-            // Here you would typically interact with the smart contract to perform the actual minting
-            // This is a placeholder and should be replaced with actual Web3 interaction code
+          
         }
     </script>
 </body>
