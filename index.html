@@ -30,192 +30,147 @@
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
   <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            background-color: #000000;
-        }
         .containerAMLO {
             width: 90%;
-            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #111111;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            background-color: #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        img {
-            max-width: 100%;
-            height: auto;
+           img {
+            width: 450px;
+            height: 450px;
             display: block;
             margin: 20px auto;
         }
         iframe {
             width: 100%;
-            max-width: 560px;
-            height: 315px;
-            margin: 20px auto;
-            display: block;
+            height: 500px;
+            margin-bottom: 20px;
             border: none;
         }
-        .header, .footer {
+        .footer {
             text-align: center;
-            padding: 20px;
-            background-color: #000000;
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #000;
         }
-        .header a, .footer a {
-            margin: 0 10px;
-            color: #ffffff;
+        .footer a {
+            margin: 0 15px;
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
-            display: inline-block;
         }
-        .header a:hover, .footer a:hover {
+        .footer a:hover {
             text-decoration: underline;
-            color: #cccccc;
         }
-        h1 {
-            font-size: 28px;
+            .header {
+            text-align: left;
             margin-top: 40px;
-            margin-bottom: 20px;
-            color: #ffffff;
-            text-align: center;
-        }
-        p {
-            margin-bottom: 15px;
-            color: #e0e0e0;
-            font-size: 16px;
-            line-height: 1.8;
-        }
-        a {
-            color: #4da6ff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        ol {
-            color: #e0e0e0;
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-            font-size: 16px;
-            line-height: 1.8;
-        }
-        .section {
-            margin-bottom: 40px;
             padding: 20px;
-            background-color: #1a1a1a;
-            border-radius: 8px;
+            background-color: #000;
         }
-        @media (max-width: 768px) {
-            .containerAMLO {
-                width: 95%;
-                padding: 10px;
-            }
-            h1 {
-                font-size: 24px;
-            }
-            .header a, .footer a {
-                margin: 5px;
-                display: block;
-            }
-            p, li {
-                font-size: 14px;
-            }
+        .footer a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
   </head>
   <body>
         <!-- Header Section -->
     <div class="header">
-        <a href="#acerca">Acerca</a>
-        <a href="#web3">Ayuda Metamask</a>
-        <a href="#bando">Ayuda Base</a>
+        <a href="https://amlovers.xyz/#acerca" target="_self">Acerca</a> |
+        <a href="https://amlovers.xyz/#web3" target="_self">Ayuda Metamask</a> | 
+        <a href="https://amlovers.xyz/#bando" target="_self">Ayuda Base</a> |  
         <a href="https://warpcast.com/amlovers" target="_blank">Farcaster</a>
     </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <div class="containerAMLO">
-      <div id="acerca" class="section">
-        <h1>¿Qué Son los AMLOvers?</h1>
+      <div id="acerca">
+        <h1 class="text-2xl font-bold line-clamp-1 xs:text-3xl lg:text-4xl">¿Qué Son los AMLOvers?</h1><br>
         <p>
             AMLOvers es una colección de 2024 Tokens No Fungibles (NFT`s por sus siglas en inglés) que rinden homenaje al presidente Andrés Manuel López Obrador. Cada token de la colección está compuesto por 8 atributos diferentes por lo cual cada AMLOver es único y diferente al resto de la colección.
         </p>
+            <!-- imagen AMLOver #1209 -->
         <img 
             src="https://i.postimg.cc/ZR2TmxQ0/AMLOver.png"
             alt="AMLOver #1209">
       <p>
         La colección está creada sobre la Blockchain de Base lo cual ayuda a reducir los costos asociados a transacciones. Adquirir un token es muy sencillo ya que solo es necesario contar con una billetera Web3 y Ether sobre la red de Base. A continuación te mostramos como conseguir una billetera Web3 y comprar Eth en Base en México sin la necesidad de pasar por un exchange o con altas comisiones.
-      </p>
-      </div>
-       <div id="web3" class="section">
-        <h1>¿Cómo obtener una billetera Web3?</h1>
+      </p><br><br></div>
+        <p></p>
+       <div id="web3">
+        <h1 class="text-2xl font-bold line-clamp-1 xs:text-3xl lg:text-4xl">¿Cómo obtener una billetera Web3?</h1>
       <p>
         Obtener una billetera Web3 es muy sencillo y gratuito, es importante aclarar que te mostraremos la forma de instalar Metamask sin embargo existen muchas otras billeteras Web3 (Rainbow, Coinbase, Phantom, etc.) y puedes utilizar cualquiera de ellas para comprar un AMLOver.
       </p>
-      <ol>
-        <li>Visita el <a href="https://metamask.io/download/" target="_blank">sitio oficial de Metamask</a>, donde se detectará el tipo de navegador con el que cuentas y te dará la opción de descarga correspondiente, da click en el botón "Install MetaMask"</li>
-        <li>Se abrirá una nueva pestaña de tu navegador que te lleva al sitio oficial de extensiones de tu navegador, estando ahí da click en "Add to Brower" (Browser puede ser chrome, netscape, opera, brave, etc.)</li>
-        <li>Acepta el popup dando click en "Add Extension"</li>
-        <li>Una vez instalada la extensión se abrirá una nueva pestaña, en esta vamos a configurar la billetera, el primer paso es aceptar los términos y condiciones de uso y seleccionar la opción de "Create a New Wallet"</li>
-        <li>Aceptamos nuevamente el manejo de datos</li>
-        <li>Creamos un password de usuario, es importante aclarar que este password sirve únicamente para abrir/cerrar la extensión y si lo olvidamos no hay forma de recuperarlo.</li>
-        <li>Seleccionamos la opción de "Secure Your Wallet" y copiamos las 12 palabras que son mostradas en pantalla.</li>
-        <li><strong>*** Es importante guardar estas palabras en un lugar seguro y fuera del alcance de terceros ya que son la única forma de recuperar el contenido de nuestra billetra en caso de ser necesario. Si alguna persona tiene conocimiento de estas palabras puede tomar el control de la billetera y de los activos asociados (Ether, criptomonedas y/o NFTs)</strong></li>
-        <li>Confirmamos las palabras clave</li>
-        <li>Tenemos una billetera de Ethereum!!!</li>
-      </ol>
       <p>
-        El siguiente video te muestra el paso a paso, así como algunos tips de seguridad para que tengas una Billetera Web3.
+        1- Visita el <a href="https://metamask.io/download/" target="_blank">sitio oficial de Metamask</a>, donde se detectará el tipo de navegador con el que cuentas y te dará la opción de descarga correspondiente, da click en el botón "Install MetaMask"<br>
+        2- Se abrirá una nueva pestaña de tu navegador que te lleva al sitio oficial de extensiones de tu navegador, estando ahí da click en "Add to Brower" (Browser puede ser chrome, netscape, opera, brave, etc.)<br>
+        3- Acepta el popup dando click en "Add Extension"<br>
+        4- Una vez instalada la extensión se abrirá una nueva pestaña, en esta vamos a configurar la billetera, el primer paso es aceptar los términos y condiciones de uso y seleccionar la opción de "Create a New Wallet"<br>
+        5- Aceptamos nuevamente el manejo de datos<br>
+        6- Creamos un password de usuario, es importante aclarar que este password sirve únicamente para abrir/cerrar la extensión y si lo olvidamos no hay forma de recuperarlo.<br>
+        7- Seleccionamos la opción de "Secure Your Wallet" y copiamos las 12 palabras que son mostradas en pantalla.<br>
+        <bold>*** Es importante guardar estas palabras en un lugar seguro y fuera del alcance de terceros ya que son la única forma de recuperar el contenido de nuestra billetra en caso de ser necesario. Si alguna persona tiene conocimiento de estas palabras puede tomar el control de la billetera y de los activos asociados (Ether, criptomonedas y/o NFTs)</bold><br>
+        8- Confirmamos las palabras clave<br>
+        9- Tenemos una billetera de Ethereum!!!<br><br><br>
       </p>
+       <p>
+        El siguiente video te muestra el paso a paso, así como algunos tips de seguridad para que tengas una Billetera Web3.<br>
+      </p>
+        <!-- video metamask -->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/XKfz3xj5QFM?si=03IQ8S8KywbzBsAZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       </div>
-       <div id="bando" class="section">
-        <h1>¿Cómo obtener Ether en Base?</h1>
+        <p></p><br><br></div>
+       <div id="bando">
+        <h1 class="text-2xl font-bold line-clamp-1 xs:text-3xl lg:text-4xl">¿Cómo obtener Ether en Base?</h1>
               <p>
         Base es un Layer 2 de ethereum creado por Coinbase. La principal ventaja de operar sobre un Layer 2 es la reducción en el costo de las transacciones, mientras que en L1 el costo puede ir de 1 o 2 dólares hasta los cientos, en un L2 como Base las transacciones cuestan centavos de dolar. Para fondear tu billetera directamente en Base vamos a poner como ejemplo a <a href="https://bando.cool/" target="_blank">Bando</a>, la forma más fácil y rápida de entrar y salir del mundo cripto en segundos en México.
         </p>
-      <ol>
-        <li>Visita el <a href="https://bando.cool/signup" target="_blank">sitio oficial de Bando</a>, donde vas a crear una cuenta de usuario, para ello ingresa un email válido y da click en "verificar".</li>
-        <li>Ingresa el código que recibiste por correo electrónico, el código tiene una vigencia de 2 horas.</li>
-        <li>Llena los campos con la información solicitada y da click en verificar.</li>
-        <li>Una vez que estés en el home de <a href="https://bando.cool/" target="_blank">Bando</a> asegúrate de estar en la pestaña de "Compra"</li>
-        <li>En la opción de "Selecciona una Red y Token" busca Base como red y Ether como token</li>
-        <li>Selecciona la cantidad en MXN que vas a cambiar por ETH, el sistema te dará una cotización de acuerdo al tipo de cambio y da click en continuar.</li>
-        <li><strong>*** Cada AMLOver tiene un costo de 0.03 ETH que equivale a unos 1,500 MXN (el monto puede variar por el tipo de cambio).</strong></li>
-        <li>Recuerda que es necesario pagar las comisiones de la red de Base por lo que te sugerimos consideres un mínimo de 0.031 ETH cuando menos por cada AMLOver.</li>
-        <li>El sistema te mostrará un resumen de tu operación, en la última casilla deberas agregar la dirección de la billetera Web3 donde vas a recibir los fondos y con la cual vas a comprar los AMLOvers. Da click en confirmar.</li>
-        <li>El sistema te mostrará el numero de cuenta y concpeto con el  cual deberás realizar el depósito en MXN para acreditar los fondos en tu billetera Web3</li>
-      </ol>
+      <p>
+        1- Visita el <a href="https://bando.cool/signup" target="_blank">sitio oficial de Bando</a>, donde vas a crear una cuenta de usuario, para ello ingresa un email válido y da click en "verificar".<br>
+        2- Ingresa el código que recibiste por correo electrónico, el código tiene una vigencia de 2 horas.<br>
+        3- Llena los campos con la información solicitada y da click en verificar.<br>
+        4- Una vez que estés en el home de <a href="https://bando.cool/" target="_blank">Bando</a> asegúrate de estar en la pestaña de "Compra"<br>
+        5- En la opción de "Selecciona una Red y Token" busca Base como red y Ether como token<br>
+        6- Selecciona la cantidad en MXN que vas a cambiar por ETH, el sistema te dará una cotización de acuerdo al tipo de cambio y da click en continuar.<br>
+        <bold>*** Cada AMLOver tiene un costo de 0.03 ETH que equivale a unos 1,500 MXN (el monto puede variar por el tipo de cambio).<br>
+          Recuerda que es necesario pagar las comisiones de la red de Base por lo que te sugerimos consideres un mínimo de 0.031 ETH cuando menos por cada AMLOver.<br>
+        7- El sistema te mostrará un resumen de tu operación, en la última casilla deberas agregar la dirección de la billetera Web3 donde vas a recibir los fondos y con la cual vas a comprar los AMLOvers. Da click en confirmar.<br>
+        8- El sistema te mostrará el numero de cuenta y concpeto con el  cual deberás realizar el depósito en MXN para acreditar los fondos en tu billetera Web3<br>
+        <!-- imagen deposito -->
         <img 
             src="https://i.postimg.cc/kgvXS82h/bando.png"
             alt="Confirmación Bando">
-        <p>Una vez se acredite la transferencia a Bando, recibirás el Ether en la cuenta proporcionada y podrás comprar tu AMLOver.</p>
-      <p>
-        El siguiente video te muestra un resumen del proceso, sin embargo si llegarás a tener alguna duda o problema puedes contactar al equipo de soporte técnico de Bando via <a href="https://t.me/+ZUfDxp78dwAwMDcx" target="_blank">Telegram</a>
+        9- Una vez se acredite la transferencia a Bando, recibirás el Ether en la cuenta proporcionada y podrás comprar tu AMLOver.
       </p>
+      <p>
+        El siguiente video te muestra un resumen del proceso, sin embargo si llegarás a tener alguna duda o problema puedes contactar al equipo de soporte técnico de Bando via <a href="https://t.me/+ZUfDxp78dwAwMDcx" taget="_blank">Telegram</a><br><br><br>
+      </p>
+        <!-- video bando -->
         <iframe width="560" height="315" src="https://www.youtube.com/embed/qe-AxuZ93eE?si=kug0p4eFNIH3nASC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-        <div class="section">
-              <h1>¿Dudas o comentarios?</h1>
+      <br></div>
+              <h1 class="text-2xl font-bold line-clamp-1 xs:text-3xl lg:text-4xl">¿Dudas o comentarios?</h1><br>
         <p>
             Puedes enviarnos un correo a la dirección <a href="mailto:amlo.onchain@gmail.com">amlo.onchain@gmail.com</a> y con todo gusto te ayudaremos y guiaremos en el proceso de compra.
         </p>
-        </div>
       <p><br><br><br><br>
        <!-- viva la 4t -->
        </p>
     </div>
     <!-- Footer Section -->
     <div class="footer">
-        <h1>¡COMPRA O REGALA UN AMLOVER NFT COLECCIONABLE!</h1>
+        <h1 class="text-2xl font-bold line-clamp-1 xs:text-3xl lg:text-4xl"> ¡COMPRA O REGALA UN AMLOVER NFT COLECCIONABLE!</h1><br>
         <a href="https://opensea.io/collection/amlovers" target="_blank">OpenSea</a> | 
         <a href="https://basescan.org/address/0xbad843407d94b2c17f78d6718f1f8fb7be8c9fb5" target="_blank">Base SmartContract</a> | 
         <a href="https://x.com/AMLOvers_NFT" target="_blank">Twitter</a> | 
         <a href="https://warpcast.com/amlovers" target="_blank">Farcaster</a>
-    </div
+    </div>
+  </body>
+</html>
