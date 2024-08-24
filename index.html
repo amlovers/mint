@@ -62,6 +62,29 @@
             padding: 20px;
             margin: 20px 0;
             border-radius: 8px;
+            text-align: center;
+        }
+        button {
+            background-color: #4da6ff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #3a8ae0;
+        }
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+            border-radius: 4px;
+            border: 1px solid #4da6ff;
+            background-color: #333;
+            color: #fff;
         }
         @media (max-width: 768px) {
             .container {
@@ -89,6 +112,7 @@
     </div>
     
     <div class="container">
+        <!-- Minting Section -->
         <div id="root"></div>
         <script type="module" src="/src/main.tsx"></script>
         
