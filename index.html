@@ -1,104 +1,128 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<!--metadata general -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="profile" href="https://gmpg.org/xfn/11" />
+  <link rel="pingback" href="https://amlovers.xyz/xmlrpc.php" />
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
   <title>AMLOvers Mint</title>
+  <meta name="description" content="AMLOvers es una colección de NFTS que rinde homenaje al presidente Andrés Manuel López Obrador." />
+  <link rel="canonical" href="https://amlovers.xyz/" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AMLOvers Mint" />
+  <meta property="og:description" content="AMLOvers es una colección de NFTS que rinde homenaje al presidente Andrés Manuel López Obrador." />
+  <meta property="og:url" content="https://amlovers.xyz/" />
+  <meta property="og:site_name" content="AMLOvers" />
+  <meta property="article:modified_time" content="2024-07-24T18:55:05+00:00" />
+  <meta property="og:image" content="https://i.postimg.cc/Ss2LbT6f/amlovers.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+  <meta property="og:image:type" content="image/png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel='dns-prefetch' href='//www.googletagmanager.com' />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #ffffff;
-      background-color: #000000;
-      margin: 0;
-      padding: 0;
-    }
-    .containerAMLO {
-      width: 90%;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #000;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 20px auto;
-    }
-    iframe {
-      width: 100%;
-      max-width: 560px;
-      height: 315px;
-      margin: 20px auto;
-      display: block;
-    }
-    .header {
-      text-align: center;
-      padding: 20px;
-      background-color: #000;
-    }
-    .header a {
-      margin: 0 10px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px 0;
-      background-color: #000;
-    }
-    .footer a {
-      margin: 0 15px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
-    h1 {
-      font-size: 24px;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-    @media (max-width: 768px) {
-      img {
-        width: 100%;
-        height: auto;
-      }
-      iframe {
-        height: 56.25vw; /* 16:9 aspect ratio */
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- Header Section -->
-  <div class="header">
-    <a href="#acerca" target="_self">Acerca</a> |
-    <a href="#web3" target="_self">Ayuda Metamask</a> | 
-    <a href="#bando" target="_self">Ayuda Base</a> |  
-    <a href="https://warpcast.com/amlovers" target="_blank">Farcaster</a>
-  </div>
-
-  <div class="containerAMLO">
-    <!-- Minting Section -->
-    <div id="root"></div>
+        .containerAMLO {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 450px;
+            height: 450px;
+            display: block;
+            margin: 20px auto;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            margin-bottom: 20px;
+            border: none;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            background-color: #000;
+        }
+        .footer a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .header {
+            text-align: left;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #000;
+        }
+        .footer a {
+            margin: 0 15px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .containerAMLO {
+                width: 100%;
+                padding: 10px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+            iframe {
+                width: 100%;
+                height: 56.25vw; /* 16:9 aspect ratio */
+            }
+            .header, .footer {
+                text-align: center;
+            }
+            .header a, .footer a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+  </head>
+  <body>
+        <!-- Header Section -->
+    <div class="header">
+        <a href="#acerca" target="_self">Acerca</a> |
+        <a href="#web3" target="_self">Ayuda Metamask</a> | 
+        <a href="#bando" target="_self">Ayuda Base</a> |  
+        <a href="https://warpcast.com/amlovers" target="_blank">Farcaster</a>
+    </div>
+    <div id="root" style="margin-bottom: 20px;"></div>
     <script type="module" src="/src/main.tsx"></script>
-
-    <div id="acerca">
-      <h1>¿Qué Son los AMLOvers?</h1>
-      <p>
-        AMLOvers es una colección de 2024 Tokens No Fungibles (NFT's por sus siglas en inglés) que rinden homenaje al presidente Andrés Manuel López Obrador. Cada token de la colección está compuesto por 8 atributos diferentes por lo cual cada AMLOver es único y diferente al resto de la colección.
-      </p>
-      <img src="https://i.postimg.cc/ZR2TmxQ0/AMLOver.png" alt="AMLOver #1209">
+    <div class="containerAMLO">
+      <div id="acerca">
+        <h1 class="text-2xl font-bold line-clamp-1 xs:text-3xl lg:text-4xl">¿Qué Son los AMLOvers?</h1><br>
+        <p>
+            AMLOvers es una colección de 20242 Tokens No Fungibles (NFT`s por sus siglas en inglés) que rinden homenaje al presidente Andrés Manuel López Obrador. Cada token de la colección está compuesto por 8 atributos diferentes por lo cual cada AMLOver es único y diferente al resto de la colección.
+        </p>
+            <!-- imagen AMLOver #1209 -->
+        <img 
+            src="https://i.postimg.cc/ZR2TmxQ0/AMLOver.png"
+            alt="AMLOver #1209">
       <p>
         La colección está creada sobre la Blockchain de Base lo cual ayuda a reducir los costos asociados a transacciones. Adquirir un token es muy sencillo ya que solo es necesario contar con una billetera Web3 y Ether sobre la red de Base. A continuación te mostramos como conseguir una billetera Web3 y comprar Eth en Base en México sin la necesidad de pasar por un exchange o con altas comisiones.
-      </p>
-    </div>
+      </p><br><br></div>
         <p></p>
        <div id="web3">
         <h1 class="text-2xl font-bold line-clamp-1 xs:text-3xl lg:text-4xl">¿Cómo obtener una billetera Web3?</h1>
@@ -158,12 +182,14 @@
       <p><br><br><br><br>
        <!-- viva la 4t -->
        </p>
-     <div class="footer">
-    <h1>¡COMPRA O REGALA UN AMLOVER NFT COLECCIONABLE!</h1>
-    <a href="https://opensea.io/collection/amlovers" target="_blank">OpenSea</a> | 
-    <a href="https://basescan.org/address/0xbad843407d94b2c17f78d6718f1f8fb7be8c9fb5" target="_blank">Base SmartContract</a> | 
-    <a href="https://x.com/AMLOvers_NFT" target="_blank">Twitter</a> | 
-    <a href="https://warpcast.com/amlovers" target="_blank">Farcaster</a>
-  </div>
-</body>
+    </div>
+    <!-- Footer Section -->
+    <div class="footer">
+        <h1 class="text-2xl font-bold line-clamp-1 xs:text-3xl lg:text-4xl"> ¡COMPRA O REGALA UN AMLOVER NFT COLECCIONABLE!</h1><br>
+        <a href="https://opensea.io/collection/amlovers" target="_blank">OpenSea</a> | 
+        <a href="https://basescan.org/address/0xbad843407d94b2c17f78d6718f1f8fb7be8c9fb5" target="_blank">Base SmartContract</a> | 
+        <a href="https://x.com/AMLOvers_NFT" target="_blank">Twitter</a> | 
+        <a href="https://warpcast.com/amlovers" target="_blank">Farcaster</a>
+    </div>
+  </body>
 </html>
